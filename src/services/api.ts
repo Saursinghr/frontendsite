@@ -1,8 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import apiUrl from '../config';
+import { API_BASE_URL } from '../config';
 
 // API Configuration
-const API_BASE_URL = apiUrl;
 const API_TIMEOUT = 30000; // 30 seconds
 
 // Create axios instance with default configuration
