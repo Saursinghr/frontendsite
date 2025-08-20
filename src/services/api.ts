@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 // API Configuration
-const API_BASE_URL = 'https://projectsite-08tk.onrender.com/api';
+const API_BASE_URL = 'https://projectsite-08tk.onrender.com';
 const API_TIMEOUT = 30000; // 30 seconds
 
 // Create axios instance with default configuration
