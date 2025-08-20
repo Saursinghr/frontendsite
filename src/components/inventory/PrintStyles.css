@@ -1,0 +1,113 @@
+
+@media print {
+  /* Hide non-printable elements */
+  nav, 
+  button, 
+  header button,
+  .sidebar,
+  input[type="text"],
+  .filter-controls,
+  div[data-sidebar="sidebar"],
+  .non-printable {
+    display: none !important;
+  }
+  
+  /* Reset layout for printing */
+  body, html {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  
+  /* Make sure tables print well */
+  table {
+    width: 100% !important;
+    page-break-inside: auto !important;
+  }
+  
+  tr {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+  
+  th, td {
+    padding: 8px !important;
+  }
+  
+  /* Add page headers */
+  @page {
+    margin: 0.5cm;
+  }
+  
+  /* Ensure background colors print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Make the main content full width */
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Transactions print styling */
+  .transaction-date {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .transaction-item {
+    margin-bottom: 8px !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  /* Status badges */
+  .status-badge {
+    border: 1px solid !important;
+    padding: 3px 8px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+  }
+  
+  .in-stock {
+    color: #22c55e !important;
+    background-color: #dcfce7 !important;
+    border-color: #22c55e !important;
+  }
+  
+  .low-stock {
+    color: #eab308 !important;
+    background-color: #fef9c3 !important;
+    border-color: #eab308 !important;
+  }
+  
+  .out-of-stock {
+    color: #ef4444 !important;
+    background-color: #fee2e2 !important;
+    border-color: #ef4444 !important;
+  }
+  
+  /* Add page title */
+  .print-title {
+    display: block !important;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Add print date */
+  .print-title::after {
+    content: " - Printed on " attr(data-print-date);
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
