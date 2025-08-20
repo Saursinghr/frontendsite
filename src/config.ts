@@ -1,5 +1,6 @@
 // API configuration
-export const API_BASE_URL = 'https://projectsite-08tk.onrender.com/api';
+const api = import.meta.env.VITE_API_URL;
+export default api;
 
 // Other configuration settings
 export const APP_NAME = 'BuildTrack';
